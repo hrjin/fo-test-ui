@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+    <!-- property :: LOG_PREFIX  -->
+    <springProperty scope="context" name="LOG_PREFIX" source="spring.application.name" />
+    
+	<!-- Console log Appender.-->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                [${LOG_PREFIX}] %d{yyyy-MM-dd HH:mm:ss} [%thread] [%-5level] %logger{36} - %msg%n
+            </Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    
+	<!--
+        org.springframework.web 패키지 아래에서 발생하는 INFO 레벨 로그를 Console, File에 남깁니다. 
+        root의 속성을 상속받지 않습니다.
+    -->
+    <logger name="org.springframework.web" level="INFO" />
+    <logger name="org.apache.ibatis" level="DEBUG" />
+    <logger name="org.thymeleaf" level="ERROR" additivity="false" />
+    <logger name="org.apache.http.wire" level="ERROR" additivity="false" />
+    <logger name="com.amazonaws.util" level="ERROR" additivity="false" />
+    
+    <!-- profile 설정이 local 일때 -->
+    <springProfile name="local">
+	    <root level="DEBUG">
+	    	<appender-ref ref="Console"/>
+	    </root>
+    </springProfile>
+    
+    <!-- profile 설정이 dev 일때 -->
+    <springProfile name="dev">
+	    <root level="INFO">
+	    	<appender-ref ref="Console"/>
+	    </root>
+    </springProfile>
+    
+    <!-- profile 설정이 local 이나 dev 가 아닐경우 운영 환경 -->
+    <springProfile name="!local,dev">
+	    <root level="ERROR">
+	    	<appender-ref ref="Console"/>
+	    </root>
+    </springProfile>
+</configuration>

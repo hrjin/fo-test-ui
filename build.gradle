@@ -1,0 +1,54 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.0.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+archivesBaseName = 'fo-test-ui'
+group = 'kyobobook'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    maven{
+        url "$nexusURL"
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    // implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-aws', version: '2.2.5.RELEASE'
+    
+    // web client for call rest api
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.5.6'
+    
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '31.0.1-jre'
+    
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor('org.projectlombok:lombok:1.18.20')
+    
+    // user-agent parser -> https://mvnrepository.com/artifact/nl.basjes.parse.useragent/yauaa
+    implementation group: 'nl.basjes.parse.useragent', name: 'yauaa', version: '6.3'
+    
+    // TODO: remove devtools
+    compile('org.springframework.boot:spring-boot-devtools')
+    
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+	useJUnitPlatform()
+}

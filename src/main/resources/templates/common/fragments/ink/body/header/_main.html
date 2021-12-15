@@ -1,0 +1,15 @@
+<!--/* 공통 BODY-HEADER HTML */-->
+<!--/*
+DESC : gnb case 분기를 위해 몰 타입에 따라 header.header_wrapper 영역 multiclass 부여 필요.
+교보문고 : default(multi class 없음) / 교보 eBook : type_ebook / 교보문고 sam : type_sam / 핫트랙스 : type_hottracks
+*/-->
+<header id="headerWrapper" class="header_wrapper sps">
+    <!-- 서비스몰 메뉴 -->
+    <th:block th:insert="common/fragments/ink/body/header/service-menu"></th:block>
+    <div class="header_inner">
+        <!-- GNB 검색 UI -->
+        <th:block th:insert="common/fragments/ink/body/header/gnb-search"></th:block>
+        <!-- GNB 메뉴 -->
+        <th:block th:insert="common/fragments/ink/body/header/gnb"></th:block>
+    </div>
+</header>

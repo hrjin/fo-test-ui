@@ -1,0 +1,92 @@
+<th:block th:fragment="default">
+    <div class="col_prod_info thumb">
+        <div class="prod_thumb_swiper_wrap">
+            <div class="swiper-container prod_thumb_list_wrap">
+                <!-- DESC : 블러 처리 되는 img tag의 src 속성 대신 [data-src]에 상품 이미지와 동일한 src값 적용 필요 -->
+                <ul class="swiper-wrapper">
+                    <li class="prod_thumb_item swiper-slide">
+                        <div class="blur_img_wrap">
+                            <!-- 블러 처리되는 이미지 -->
+                            <div class="blur_img_box">
+                                <img th:data-src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}"
+                                    alt="이미지 크게보기 임시이미지" />
+                            </div>
+                            <!-- //블러 처리되는 이미지 -->
+                            <!-- 상품 이미지 -->
+                            <div class="portrait_img_box">
+                                <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}"
+                                    alt="이미지 크게보기 임시이미지" />
+                            </div>
+                            <!-- //상품 이미지 -->
+                        </div>
+                    </li>
+                    <li class="prod_thumb_item swiper-slide">
+                        <div class="blur_img_wrap">
+                            <!-- 블러 처리되는 이미지 -->
+                            <div class="blur_img_box">
+                                <img th:data-src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}"
+                                    alt="이미지 크게보기 임시이미지" />
+                            </div>
+                            <!-- //블러 처리되는 이미지 -->
+                            <!-- 상품 이미지 -->
+                            <div class="portrait_img_box">
+                                <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}"
+                                    alt="이미지 크게보기 임시이미지" />
+                            </div>
+                            <!-- //상품 이미지 -->
+                        </div>
+                    </li>
+                    <li class="prod_thumb_item swiper-slide">
+                        <div class="blur_img_wrap">
+                            <!-- 블러 처리되는 이미지 -->
+                            <div class="blur_img_box">
+                                <img th:data-src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}"
+                                    alt="이미지 크게보기 임시이미지" />
+                            </div>
+                            <!-- //블러 처리되는 이미지 -->
+                            <!-- 상품 이미지 -->
+                            <div class="portrait_img_box">
+                                <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}"
+                                    alt="이미지 크게보기 임시이미지" />
+                            </div>
+                            <!-- //상품 이미지 -->
+                        </div>
+                    </li>
+                    <li class="prod_thumb_item swiper-slide">
+                        <div class="blur_img_wrap">
+                            <!-- 블러 처리되는 이미지(상품 이미지와 동일한 url src값 추가 필요) -->
+                            <div class="blur_img_box">
+                                <img th:data-src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}"
+                                    alt="이미지 크게보기 임시이미지" />
+                            </div>
+                            <!-- //블러 처리되는 이미지 -->
+                            <!-- 상품 이미지 -->
+                            <div class="portrait_img_box">
+                                <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}"
+                                    alt="이미지 크게보기 임시이미지" />
+                            </div>
+                            <!-- //상품 이미지 -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper_control_box">
+                <button type="button" class="swiper-button-prev"><span class="hidden">이전</span></button>
+                <div class="swiper-pagination"></div>
+                <button type="button" class="swiper-button-next"><span class="hidden">다음</span></button>
+            </div>
+            <div class="swiper_control_floating_box">
+                <button type="button" class="btn_swiper_floating prev disabled"><span
+                        class="hidden">이전</span></button>
+                <button type="button" class="btn_swiper_floating next"><span
+                        class="hidden">다음</span></button>
+    
+                <button type="button" class="btn_img_zoom"><span class="text">크게보기</span></button>
+            </div>
+        </div>
+        <div class="btn_wrap">
+            <button type="button" class="btn_xs btn_pill btn_line_gray"><span
+                    class="ico_preview"></span><span class="text">미리보기</span></button>
+        </div>
+    </div>
+</th:block>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <!--/* [CM/META] :: 공통 메타 요소 */-->
+    <th:block th:insert="common/fragments/ink/head/meta"></th:block>
+    <!--/* [LOCAL/META] :: local meta block */-->
+    <th:block layout:fragment="head-meta-block"></th:block>
+
+    <!--/* [SS/TITLE] */-->
+    <title th:if="${not #strings.isEmpty(title)}" th:text="${title}"></title>
+    <title th:if="${#strings.isEmpty(title) && not #strings.isEmpty(title_prefix)}" th:text="${title_prefix} + ' - 교보문고'"></title>
+    <title th:if="${#strings.isEmpty(title) && #strings.isEmpty(title_prefix)}">교보문고</title>
+    
+    <!--/* [CM/LINK] :: 공통 스타일시트 */-->
+    <th:block th:insert="common/fragments/ink/head/styles"></th:block>
+    
+    <!--/* [LOCAL/LINK] :: inline block */-->
+    <th:block layout:fragment="head-style-block"></th:block>
+    
+    <!-- [PUB/LINK] 공통 스타일 -->
+    <link rel="stylesheet" th:href="@{${cdnURI} + '/css/style_ink.css'}">
+    <!-- // [PUB/LINK] 공통 스타일 -->
+    
+    <!--/* [CM/SCRIPT] HEAD_SCRIPT_BLOCK */-->
+    <th:block th:insert="common/fragments/ink/head/scripts"></th:block>
+    
+    <!-- [SS/KbbJS] options customize -->
+    <script>
+        KbbJS.setOption('loader.baseURI', "[[${cdnURI}]]" + '/lib/kbb-js')
+    </script>
+    
+    <!--/* [LOCAL/SCRIPT] HEAD_SCRIPT_BLOCK */-->
+    <th:block layout:fragment="head-script-block"></th:block>
+    
+    <!-- [FE/KbbJS] 공통 초기화 스크립트 / KbbJS.load() -->
+    <script th:src="@{${cdnURI} + '/js/init.js'}"></script>
+</head>
+<body>
+    <div class="skip_nav_wrap">
+        <a href="#headerWrapper">메뉴 바로가기</a>
+        <a href="#containerWrapper">본문 바로가기</a>
+    </div>
+    <!-- BODY_WRAPPER -->
+    <div class="wrapper">
+        <!--/* [CM/BODY/HEADER] BODY_HEADER_BLOCK */-->
+        <th:block th:insert="common/fragments/ink/body/header/_main"></th:block>
+
+        <main id="containerWrapper" class="container_wrapper">
+            <!--/* [LOCAL/CONTENT] BODY_CONTENT_BLOCK */-->
+            <th:block layout:fragment="main-content"></th:block>    
+        </main>
+        
+        <!--/* [CM/BODY/FOOTER] BODY_FOOTER_BLOCK */-->
+        <th:block th:insert="common/fragments/ink/body/footer"></th:block>
+        
+        <!--/* [CM/BODY/WING_BANNER] BODY_WING_BANNER */-->
+        <th:block th:insert="common/fragments/ink/body/wing-banner"></th:block>
+        
+        <!-- 탑버튼 -->
+        <div class="floating_wrapper">
+            <a href="#top" class="btn_go_top" title="최상위 화면으로">TOP</a>
+        </div>
+        <!-- // 탑버튼 -->
+    <!-- // BODY_WRAPPER -->
+    </div>
+    
+    <!--/* [LOCAL/LAYER] BODY_LAYER_BLOCK */-->
+    <th:block layout:fragment="layer-content"></th:block>
+    
+    <!--/* [CM/BODY/SCRIPT] BODY_SCRIPT_BLOCK */-->
+    <th:block th:insert="common/fragments/ink/body/script"></th:block>
+    
+    <!--/* [LOCAL/BODY/SCRIPT] BODY_SCRIPT_BLOCK */-->
+    <th:block layout:fragment="body-script-block"></th:block>
+    
+    <!-- [PUB/SCRIPT] 공통 스크립트 -->
+    <script th:src="@{${cdnURI} + '/js/ui_ink.js'}"></script>
+    <!-- // [PUB/SCRIPT] 공통 스크립트 -->
+</body>
+</html>

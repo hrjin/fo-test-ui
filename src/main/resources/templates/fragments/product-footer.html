@@ -1,0 +1,299 @@
+<th:block th:fragment="default">
+    <!-- 상품상세 하단 고정영역 -->
+    <div class="prod_detail_footer">
+        <!-- 상품 옵션 선택 영역(구매정보 영역 2-1, 2-2 case에서 노출) -->
+        <div class="prod_option_info_wrap">
+            <div class="footer_contents_inner">
+                <button type="button" class="btn_option_more"><span class="hidden">옵션 선택 영역 펼치기</span></button>
+                <div class="left_area">
+                    <div class="option_list_wrap custom_scroll_wrap">
+                        <div class="option_box">
+                            <span class="option_label">분철 서비스</span>
+                            <div id="optionTest" class="option_sel_box">
+                                <div class="form_sel" data-renderer="selectProdOption"
+                                    data-widget-class="select_prod_option" data-append-to="#optionTest">
+                                    <select title="옵션 선택">
+                                        <option>옵션 선택</option>
+                                        <option data-price="129,000" data-unit="원">2권 분철 (문제지 1권, 답안지 1권)</option>
+                                        <option data-price="129,000" data-unit="원">2권 분철 (문제지 1권, 답안지 1권)2권 분철 (문제지 1권,
+                                            답안지 1권)2권 분철 (문제지 1권, 답안지 1권)2권 분철 (문제지 1권, 답안지 1권)2권 분철 (문제지 1권, 답안지 1권)
+                                        </option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option_box">
+                            <span class="option_label">분철 서비스</span>
+                            <div id="optionTest2" class="option_sel_box">
+                                <div class="form_sel" data-renderer="selectProdOption"
+                                    data-widget-class="select_prod_option" data-append-to="#optionTest2">
+                                    <select title="옵션 선택">
+                                        <option>옵션 선택</option>
+                                        <option data-price="129,000" data-unit="원">2권 분철 (문제지 1권, 답안지 1권)</option>
+                                        <option data-price="129,000" data-unit="원">2권 분철 (문제지 1권, 답안지 1권)2권 분철 (문제지 1권,
+                                            답안지 1권)2권 분철 (문제지 1권, 답안지 1권)2권 분철 (문제지 1권, 답안지 1권)2권 분철 (문제지 1권, 답안지 1권)
+                                        </option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                        <option data-price="129,000" data-unit="원">분철서비스 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_area">
+                    <!-- 선택한 옵션 없는 경우 -->
+                    <!--<div class="no_data">
+                                <span class="no_data_desc">분철 서비스를 선택하지 않았습니다.</span>
+                            </div>-->
+                    <!-- // 선택한 옵션 없는 경우 -->
+
+                    <!-- 선택한 옵션 있는 경우 -->
+                    <div class="option_selected_wrap">
+                        <div class="custom_scroll_wrap">
+                            <ul class="option_selected_list">
+                                <!-- repeat -->
+                                <li class="option_selected_item">
+                                    <div class="prod_option">2권 분철 (문제지 1권, 답안지 1권)</div>
+                                    <div class="option_price_info">
+                                        <div class="form_spinner_box">
+                                            <input type="number" value="1" class="form_spinner" title="수량 입력" />
+                                        </div>
+                                        <div class="option_price">
+                                            <span class="val">68,800</span>
+                                            <span class="unit">원</span>
+                                        </div>
+                                    </div>
+                                    <!-- DESC : 옵션 삭제 시, li.item DOM구조 삭제 -->
+                                    <button type="button" class="btn_option_del"><span class="hidden">선택한 옵션
+                                            삭제</span></button>
+                                </li>
+                                <!-- // repeat -->
+                                <!-- repeat -->
+                                <li class="option_selected_item">
+                                    <div class="prod_option">2권 분철 (문제지 1권, 답안지 1권)</div>
+                                    <div class="option_price_info">
+                                        <div class="form_spinner_box">
+                                            <input type="number" value="1" class="form_spinner" title="수량 입력" />
+                                        </div>
+                                        <div class="option_price">
+                                            <span class="val">55,268,800</span>
+                                            <span class="unit">원</span>
+                                        </div>
+                                    </div>
+                                    <!-- DESC : 옵션 삭제 시, li.item DOM구조 삭제 -->
+                                    <button type="button" class="btn_option_del"><span class="hidden">선택한 옵션
+                                            삭제</span></button>
+                                </li>
+                                <!-- // repeat -->
+                                <!-- repeat -->
+                                <li class="option_selected_item">
+                                    <div class="prod_option">2권 분철 (문제지 1권, 답안지 1권) 2권 분철 (문제지 1권, 답안지 1권) 2권 분철 (문제지
+                                        1권, 답안지 1권)</div>
+                                    <div class="option_price_info">
+                                        <div class="form_spinner_box">
+                                            <input type="number" value="1" class="form_spinner" title="수량 입력" />
+                                        </div>
+                                        <div class="option_price">
+                                            <span class="val">55,268,800</span>
+                                            <span class="unit">원</span>
+                                        </div>
+                                    </div>
+                                    <!-- DESC : 옵션 삭제 시, li.item DOM구조 삭제 -->
+                                    <button type="button" class="btn_option_del"><span class="hidden">선택한 옵션
+                                            삭제</span></button>
+                                </li>
+                                <!-- // repeat -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="option_total_price">
+                        <span class="prod_info_title">총 <span class="count">1</span>권 상품 금액</span>
+                        <span class="prod_info_price">
+                            <span class="val">55,268,000</span>
+                            <span class="unit">원</span>
+                        </span>
+                    </div>
+                    <!-- // 선택한 옵션 있는 경우 -->
+                </div>
+            </div>
+        </div>
+        <!-- // 상품 옵션 선택 영역(구매정보 영역 2-1, 2-2 case에서 노출) -->
+        <!-- 구매 정보 영역 -->
+        <div class="prod_purchase_info_wrap">
+            <!-- CASE 1. 기본(옵션이 없는 경우) -->
+            <!-- DESC : style="display: none;" 은 퍼블 작업을 위한 임시 css. 작업시 삭제 필요 -->
+            <div class="footer_contents_inner">
+                <div class="left_area">
+                    <span class="prod_info_title">총 상품 금액</span>
+                    <span class="prod_info_price">
+                        <span class="val">25,200</span>
+                        <span class="unit">원</span>
+                    </span>
+                </div>
+                <div class="right_area">
+                    <div class="form_spinner_box">
+                        <input type="number" value="1" class="form_spinner" title="수량 입력" />
+                    </div>
+
+                    <!-- DESC : 버튼 풀배열인경우 넓이조절을 위해 div.btn_wrap 영역 [multi] class 추가 -->
+                    <div class="btn_wrap multi">
+                        <!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+                        <button type="button" class="btn_wish size_lg"><span class="ico_wish"></span><span
+                                class="hidden">찜하기</span></button>
+                        <button type="button" class="btn_lg btn_line_gray"><span class="ico_gift"></span><span
+                                class="text">선물하기</span></button>
+                        <button type="button" class="btn_lg btn_light_gray"><span class="text">장바구니</span></button>
+
+                        <!-- DESC : 버튼 1개만 있는 경우 [ single ] class 추가 -->
+                        <div class="btn_wrap overlap">
+                            <button type="button" class="btn_lg btn_line_primary"><span
+                                    class="text">바로드림</span></button>
+                            <button type="button" class="btn_lg btn_primary"><span class="text">바로구매</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // CASE 1. 기본(옵션이 없는 경우) -->
+
+            <!-- CASE 2-1. 기본(옵션이 있는 경우 - 선택 전) -->
+            <div class="footer_contents_inner" style="display: none;">
+                <div class="left_area">
+                    <span class="prod_info_title">총 상품 금액</span>
+                    <span class="prod_info_price">
+                        <span class="val">25,200</span>
+                        <span class="unit">원</span>
+                    </span>
+                </div>
+                <div class="right_area">
+                    <!-- DESC : 버튼 풀배열인경우 넓이조절을 위해 div.btn_wrap 영역 [multi] class 추가 -->
+                    <div class="btn_wrap multi">
+                        <!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+                        <button type="button" class="btn_wish size_lg"><span class="ico_wish"></span><span
+                                class="hidden">찜하기</span></button>
+                        <button type="button" class="btn_lg btn_line_gray"><span class="ico_gift"></span><span
+                                class="text">선물하기</span></button>
+                        <button type="button" class="btn_lg btn_light_gray"><span class="text">장바구니</span></button>
+
+                        <!-- DESC : 버튼 1개만 있는 경우 [ single ] class 추가 -->
+                        <div class="btn_wrap overlap">
+                            <button type="button" class="btn_lg btn_line_primary"><span
+                                    class="text">바로드림</span></button>
+                            <button type="button" class="btn_lg btn_primary"><span class="text">바로구매</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // CASE 2-1. 기본(옵션이 있는 경우 - 선택 전) -->
+
+            <!-- CASE 2-2. 기본(옵션이 있는 경우 - 선택 후) -->
+            <!-- DESC : style="display: none;" 은 퍼블 작업을 위한 임시 css. 작업시 삭제 필요 -->
+            <div class="footer_contents_inner" style="display: none;">
+                <div class="left_area">
+                    <span class="prod_info_title">총 상품 금액</span>
+                    <span class="prod_info_price">
+                        <span class="val">25,200</span>
+                        <span class="unit">원</span>
+                    </span>
+                </div>
+                <div class="right_area">
+                    <!-- DESC : 기본타입인경우 버튼 넓이조절을 위해 div.btn_wrap 영역 [multi] class 추가 -->
+                    <div class="btn_wrap">
+                        <!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+                        <button type="button" class="btn_wish size_lg"><span class="ico_wish"></span><span
+                                class="hidden">찜하기</span></button>
+
+                        <!-- DESC : 버튼 1개만 있는 경우 [ single ] class 추가 -->
+                        <div class="btn_wrap overlap single">
+                            <button type="button" class="btn_lg btn_primary"><span class="text">바로구매</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // CASE 2-2. 기본(옵션이 있는 경우 - 선택 후) -->
+
+            <!-- CASE 3. 절판, 출간예정 -->
+            <!-- DESC : style="display: none;" 은 퍼블 작업을 위한 임시 css. 작업시 삭제 필요 -->
+            <div class="footer_contents_inner" style="display: none;">
+                <div class="left_area">
+                    <div class="prod_state_text"><span class="point">절판</span>되었습니다.</div>
+                    <!--<div class="prod_state_text">곧 <span class="point">출간</span>되는 도서입니다.</div>-->
+                </div>
+                <div class="right_area">
+                    <!-- DESC : 기본타입인경우 버튼 넓이조절을 위해 div.btn_wrap 영역 [multi] class 추가 -->
+                    <div class="btn_wrap">
+                        <!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+                        <button type="button" class="btn_wish size_lg active"><span class="ico_wish"></span><span
+                                class="hidden">찜하기</span></button>
+                        <button type="button" class="btn_lg btn_line_primary"><span
+                                class="ico_purchase_alarm"></span><span class="text">재입고알림신청</span></button>
+                        <!--<button type="button" class="btn_lg btn_line_primary"><span class="ico_purchase_alarm"></span><span class="text">출간알림신청</span></button>-->
+                    </div>
+                </div>
+            </div>
+            <!-- // CASE 3. 절판, 출간예정 -->
+
+            <!-- CASE 4. 인터넷 주문불가 -->
+            <!-- DESC : style="display: none;" 은 퍼블 작업을 위한 임시 css. 작업시 삭제 필요 -->
+            <div class="footer_contents_inner" style="display: none;">
+                <div class="left_area">
+                    <span class="prod_info_title">총 상품 금액</span>
+                    <span class="prod_info_price">
+                        <span class="val">25,200</span>
+                        <span class="unit">원</span>
+                    </span>
+                </div>
+                <div class="right_area">
+                    <div class="form_spinner_box">
+                        <input type="number" value="1" class="form_spinner" title="수량 입력" />
+                    </div>
+
+                    <!-- DESC : 기본타입인경우 버튼 넓이조절을 위해 div.btn_wrap 영역 [multi] class 추가 -->
+                    <div class="btn_wrap">
+                        <!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+                        <button type="button" class="btn_wish size_lg"><span class="ico_wish"></span><span
+                                class="hidden">찜하기</span></button>
+                        <button type="button" class="btn_lg btn_line_primary"><span class="text">바로드림</span></button>
+                    </div>
+                </div>
+            </div>
+            <!-- // CASE 4. 인터넷 주문불가 -->
+
+            <!-- CASE 5. sam 구매 -->
+            <!-- DESC : style="display: none;" 은 퍼블 작업을 위한 임시 css. 작업시 삭제 필요 -->
+            <div class="footer_contents_inner" style="display: none;">
+                <div class="left_area">
+                    <div class="prod_state_text">
+                        <span class="sam_logo_box">
+                            <!-- <img th:src="/assets/ink/product/images/img_purchase_sam.png" alt="sam" -->
+                            <!-- "srcset=|@{/img/image1x.png} 1x, @{/img/image2x.png} 2x, @{/img/image3x.png} 3x|" -->
+                            <!-- @{${cdnURI} + '/images/ink/img_logo_kyobo_footer.png'}" -->
+                            <img th:attr="srcset=|@{${cdnURI} + '/images/product/img_purchase_sam.png'} 1x, @{${cdnURI} + '/images/product/img_purchase_sam@1.5x.png'} 1.5x, @{${cdnURI} + '/images/product/img_purchase_sam@2x.png'} 2x|"
+                                th:src="@{${cdnURI} + '/images/product/img_purchase_sam.png'}" alt="sam">
+                        </span> 그리고 책 선택
+                    </div>
+                </div>
+                <div class="right_area">
+                    <!-- DESC : 기본타입인경우 버튼 넓이조절을 위해 div.btn_wrap 영역 [multi] class 추가 -->
+                    <div class="btn_wrap">
+                        <!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+                        <button type="button" class="btn_wish size_lg"><span class="ico_wish"></span><span
+                                class="hidden">찜하기</span></button>
+                        <button type="button" class="btn_lg btn_line_primary"><span class="text">배송지 입력</span></button>
+                    </div>
+                </div>
+            </div>
+            <!-- // CASE 5. sam 구매 -->
+        </div>
+        <!-- // 구매 정보 영역 -->
+    </div>
+    <!-- // 상품상세 하단 고정영역 -->
+</th:block>

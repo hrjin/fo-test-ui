@@ -1,0 +1,189 @@
+// 상품목록 > 상품상세 > 상품상세 (도서_내서)
+{
+  // GROUP1 - 타이틀 영역
+  headTitle: {
+    title: {
+      labels: [
+        '해외주문',
+        'POD',
+        '패키지',
+        'Audio book',
+        // '예약판매',
+        // 'Pre-order',
+        // 'Special order',
+      ],
+      // [TODO:확인필요!] 관칭관제 상품별 하나만 존재유무
+      alias: '알기쉬운',
+      // value: "열린책들 창립 35주년 기념 세계문학 중단편세트 (MIDNIGHT 세트)",
+      value: "작별하지 않는다",
+    },
+    // 서브 타이틀
+    subtitle: [
+      // [TODO:확인필요!] 텍스트 볼드 스타일처리에 대한 기준 관리?
+      { text: '상반기 주요 공기업 NCS 기출복원문제/ NCS 직업기초능력 기출예상문제' },
+      { text: '온라인·실전 모의고사/ 기출특강/ AI면접 무료제공/ 모바일 OMR 답안분석' },
+      { text: '2021년 상반기 주요 공기업' },
+      { text: 'NCS 기출예상문제 / 사무직·역무직·시설직 기출예상문제/실전모의고사/기출특강/온라인 모의고사', normal: true },
+      { text: '전면개정판 13판', normal: true },
+      { text: '양장본', normal: true },
+      { text: '전 10권', normal: true },
+      { text: '두 줄 초과 시 케이스 더보기 버튼으로 오픈', normal: true }
+    ],
+  },
+  // later..
+  productType: [
+    {
+      name: "종이책",
+      price: "12600",
+      active: true
+    },
+    {
+      name: "원서/번역서",
+      price: "9900",
+    },
+    {
+      name: "eBook",
+      price: "9900",
+    },
+    {
+      name: "오디오북",
+      price: "12600",
+    },
+    {
+      name: "sam",
+      price: "9900",
+    },
+  ],
+  // GROUP2 - 상품정보 영역
+  productinfo: {
+    // 상품 unique 값
+    productId: "9791188331796",
+    // 도서 타입 양장도서,분철옵션도서 등
+    productType: "양장도서",
+    // 도서 재고
+    productCount: "30",
+    // 도서 상태 품절, 절판, 미입고신간 등
+    productState: "품절",
+    // 부제명3
+    subtitle: {
+      subtitle3: "부제명3",
+      isMedia: true,
+      mediainfo: {}
+    },
+    // 총서명
+    series: {
+      series1: "총서명1",
+      seriesVolume1: "총서권호1",
+      series2: "총서명2",
+      seriesVolume2: "총서권호2"
+    },
+    // 저자명 (배열 순서가 명확 해야 하며, 저자에 대한 구분자는 "쉼표") 저자 구분값(저자/기타저자/역자/기타역자/그림삽도인/기타그림삽도인/사진삽도인/기타사진삽도인/감수자/기타감수자/기타)
+    author: {
+      // 지음
+      written: ["프란츠 카프카", "알베르 카뮈", "다자이오사무", "에드거 맬런 포"],
+      // 옮김
+      translation: ["김예령", "김난주", "김석희", "정지원"],
+      // 그림
+      painting: ["김난주", "김석희"],
+      // 사진
+      photo: ["조영학", "이강훈", "오종우"],
+      // 감수
+      taker: ["이강훈", "오종우"],
+      // 편찬위원
+      compilationMem: ["김대우", "김상진"]
+    },
+    // 출판사명
+    publisher: "출판사명",
+    //출간정보 의 출간일 출력 형식 (yyyy년 mm월 dd일 출간)
+    publicationDate: "2021년 08월 01일",
+    //출간정보 의 초판일자 출력 형식 (N쇄 yyyy년 mm월 dd일)
+    firstEditionDate: "1쇄 2008년 09월 10일",
+    // 주간베스트 (방안1)
+    weeklyBest: "국내도서 17위, 소설 5위",
+    // 주간베스트 (방안2)
+    weeklyBest: {
+      //대대카테고리
+      categort1: "국내도서 17위",
+      //대카테고리
+      categort2: "소설 5위"
+    },
+    // 개정정보 (FLAG 값이 "NEW" 일 경우 개정판, "OLD" 일 경우 구판 그에 따른 문구 출력)
+    revisioninfo: "NEW",
+    // 리뷰
+    review: {
+      // MY REVIEW
+      myReview: "좋았어요",
+      // 인증도서 (기존 Feel Lucky) 조건(구매자 10명 이상 평가, 별점(기존 클로버) 4개인 도서) 에 대한 boolean
+      certificationBook: true,
+      // 리뷰평점
+      scope: "9.4",
+      // 리뷰개수
+      count: "10"
+    },
+    // 연관 이벤트
+    elatedEvents: [{
+        url: "kyobobook.co.kr/product/~",
+        imageUrl: "s3/bucket/product/AE2349ADASDAXC.png"
+      },
+      {
+        url: "kyobobook.co.kr/product/~",
+        imageUrl: "s3/bucket/product/AE2349ADASDAXC.png"
+      },
+      {
+        url: "kyobobook.co.kr/product/~",
+        imageUrl: "s3/bucket/product/AE2349ADASDAXC.png"
+      },
+      {
+        url: "kyobobook.co.kr/product/~",
+        imageUrl: "s3/bucket/product/AE2349ADASDAXC.png"
+      },
+      {
+        url: "kyobobook.co.kr/product/~",
+        imageUrl: "s3/bucket/product/AE2349ADASDAXC.png"
+      }
+    ]
+  },
+  // GROUP3 - 섬네일 영역
+  thumbnail: {
+    list: ["kyobobook.co.kr/product/~", "kyobobook.co.kr/product/~",
+      "kyobobook.co.kr/product/~", "kyobobook.co.kr/product/~"
+    ],
+
+    // 연동된 데이터 존재 boolean => 미리보기
+    preview: true
+  },
+  // GROUP4 - 가격/혜택 영역
+  priceinfo: {
+    // 라벨 (우선순위 === 배열순서)
+    label: ["2021년 11월 1일 오늘의 책", "이벤트", "무료배송", "사은품", "한정판매", "소득공제",
+      "정기제Free", "교보단독", "예약판매", "분찰서비스"
+    ],
+    // 정가
+    price: "14000",
+    // 할인율
+    discount: "10",
+    // 쿠폰 유무
+    coupon: true,
+    // 배송안내
+    shippinginfo: {
+      // 바로드림 (바로드림이 아닐경우 배송정책에 따른 배송비무료 분기 필요)
+      rightAway: true,
+      // 예약 주문 상품 유무
+      reservation: true,
+      // 예약 주문 일경우 예약 일자
+      reserDate: "2022년8월20일",
+      // 당일배송 유무 => 당일배송(TRUE), 그 외(FALSE), IF 당일배송 정책이 시간에 따를 경우 해당 데이터 필요x schedule 와 같은 그룹 데이터
+      departToday: true,
+      // 배송 일정 1일이내 출고가 아닐경우 예정 날짜
+      schedule: "2021-12-02",
+      // 배송지 기준
+      address: "서울 특별시 강남구 강남대로",
+    },
+    // 알립니다
+    notifyList: ["초판 한정 사인 인쇄본/포함 소설 2만원 구매 시 거치대, 지퍼백, 다이어리 증정"],
+    // 연동된 데이터 존재 boolean => EBS강좌
+    ebs: true,
+    // 연동된 데이터 존재 boolean => 매장재고위치
+    stock: true,
+  }
+}

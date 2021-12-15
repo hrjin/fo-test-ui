@@ -1,0 +1,189 @@
+// 상품목록 > 상품상세 > 상품상세 (도서_내서) > 상품상세 (도서_내서)_상품정보
+{   
+    // GROUP - 패키지 영역
+    // 패키지 상품의 메인 상품
+    proPackages: [
+        {
+            // 메인 상품 제목
+            mainTitle: "열린책들 창립 35주년 기념 세계문학 중단편",
+            // 메인 상품 가격
+            mainPrice: "10400",
+            // 메인 상품 할인율
+            mainDiscount: "10",
+            // 메인 상품 관심
+            mainProAtten: false,
+            // 메인 상품의 결합상품
+            proCombineds: [
+                {
+                    // 결합상품의 제목
+                    comTitle: "방구석 미술관",
+                    // 결합상품의 가격
+                    comPrice: "10000",
+                    // 결합상품의 할인율
+                    comDiscount: "",
+                    // 결합상품의 관심
+                    comAtten: true,
+                },
+                {
+                    // 결합상품의 제목
+                    comTitle: "B급 세계사",
+                    // 결합상품의 가격
+                    comPrice: "9000",
+                    // 결합상품의 할인율
+                    comDiscount: "",
+                    // 결합상품의 관심
+                    comAtten: false,
+                },
+                {
+                    // 결합상품의 제목
+                    comTitle: "일주일",
+                    // 결합상품의 가격
+                    comPrice: "11000",
+                    // 결합상품의 할인율
+                    comDiscount: "10",
+                    // 결합상품의 관심
+                    comAtten: true,
+                }
+            ]
+        },
+        {
+            // 메인 상품 제목
+            mainTitle: "열린책들 창립 35주년 기념 세계문학 중단편2",
+            // 메인 상품 가격
+            mainPrice: "10400",
+            // 메인 상품 할인율
+            mainDiscount: "10",
+            // 메인 상품 관심
+            mainProAtten: false,
+            // 메인 상품의 결합상품
+            proCombineds: [
+                {
+                    // 결합상품의 제목
+                    comTitle: "방구석 미술관2",
+                    // 결합상품의 가격
+                    comPrice: "10000",
+                    // 결합상품의 할인율
+                    comDiscount: "",
+                    // 결합상품의 관심
+                    comAtten: false,
+                },
+                {
+                    // 결합상품의 제목
+                    comTitle: "B급 세계사2",
+                    // 결합상품의 가격
+                    comPrice: "9000",
+                    // 결합상품의 할인율
+                    comDiscount: "",
+                    // 결합상품의 관심
+                    comAtten: false,
+                },
+                {
+                    // 결합상품의 제목
+                    comTitle: "일주일2",
+                    // 결합상품의 가격
+                    comPrice: "11000",
+                    // 결합상품의 할인율
+                    comDiscount: "10",
+                    // 결합상품의 관심
+                    comAtten: false,
+                }
+            ]
+        }
+    ],
+    // GROUP - 북카드 영역
+    proBookcardUrl: ["s3/bucket/product/AE2349ADASDAXC.png", "s3/bucket/product/AE2349ADASDAXC.png", "s3/bucket/product/AE2349ADASDAXC.png", "s3/bucket/product/AE2349ADASDAXC.png"],
+    // GROUP - 상세 이미지 영역
+    proImage: ["s3/bucket/product/AE2349ADASDAXC.png", "s3/bucket/product/AE2349ADASDAXC.png", "s3/bucket/product/AE2349ADASDAXC.png"],
+    // GROUP - 책소개 영역
+    proIntro: {
+        // 이책이 속한 분야 (카테고리) (각 카테고리 뎁스 선택 시, 해당 뎁스의 도서 목록으로 이동)
+        categorys: [
+            // 1 > 2 > 3 => 대카테고리 > 중카테고리 > 세카테고리 에 대한 카테고리 NAME 과 code 값
+            {
+                depth1: "소설",
+                depth1Code: "01",
+                depth2: "한국소설",
+                depth2Code: "0103",
+                depth3: "한국소설일반",
+                depth3Code: "010310"
+            },
+            {
+                depth1: "소설",
+                depth1Code: "06",
+                depth2: "장르소설",
+                depth2Code: "0603",
+                depth3: "역사소설",
+                depth3Code: "060310",
+            }
+        ],
+        // 이책이 속한 분야 (검색키워드)
+        searchKeywords: ["소설", "고전", "세계고전문학", "인간품격", "품격", "디자인"],
+        // 수상내역 / 미디어추천 (노출되는 1depth 데이터 클릭 시 해당되는 ‘추천도서’ 상세로 이동)
+        awards: [
+            // 수상내역, 미디어추천, 추천도서에대한 도서 ID값
+            {awardName: "서울대 도서관 대출순위 100", recommendMedia: " 2019년 대출순위", "recommendId": "11242"},
+            {awardName: "주요 일간지 북섹션 추천도서", recommendMedia: "2016년 주요일간지 소개도서", "recommendId": "12545"},
+            {awardName: "교보문고 베스트셀러", recommendMedia: "2016년 베스트셀러", "recommendId": "12345"},
+            {awardName: "KBS TV책 – 김창완과 책읽기", recommendMedia: "KBS TV책 – 김창완과 책읽기", "recommendId": "12354"},
+            {awardName: "뉴욕타임즈 선정도서", recommendMedia: "KBS TV책 – 김창완과 책읽기", "recommendId": "12325"},
+            {awardName: "교보문고 북TV 낭만서점", recommendMedia: "41회~50회 소개도서", "recommendId": "53231"},
+            {awardName: "국립중앙도서관 이용도서", recommendMedia: "2017년 대출순위 TOP20", "recommendId": "25123"},
+            {awardName: "서울대 도서관 대출순위 100", recommendMedia: "2019년 대출순위", "recommendId": "91452"},
+            {awardName: "주요 일간지 북섹션 추천도서", recommendMedia: "2016년 주요일간지 소개도서", "recommendId": "71235"},
+            {awardName: "교보문고 베스트셀러", recommendMedia: "2016년 베스트셀러", "recommendId": "61232"}
+        ],
+        // 도서 설명
+        proExplanation: {
+            // 강조 텍스트
+            emphasizeText: "무엇을 생각하면 견딜 수 있나.
+                            가슴에 활활 일어나는 불이 없다면. 기어이 돌아가 껴안을 네가 없다면.
+                            이곳에 살았던 이들로부터, 이곳에 살아 있는 이들로부터 꿈처럼 스며오는 지극한 사랑의 기억",
+            // 일반 텍스트
+            normalText: "2016년 『채식주의자』로 인터내셔널 부커상을 수상하고 2018년 『흰』으로 같은 상 최종 후보에 오른 한강 작가의 5년 만의 신작 장편소설 『작별하지 않는다』가 출간되었다. 2019년 겨울부터 이듬해 봄까지 계간 『문학동네』에 전반부를 연재하면서부터 큰 관심을 모았고, 그뒤 일 년여에 걸쳐 후반부를 집필하고 또 전체를 공들여 다듬는 지난한 과정을 거쳐 완성되었다. 이로써 『소년이 온다』(2014), 『흰』(2016), ‘눈’ 연작(2015, 2017) 등 근작들을 통해 어둠 속에서도 한줄기 빛을 향해 나아가는 인간의 고투와 존엄을 그려온 한강 문학이 다다른 눈부신 현재를 또렷한 모습으로 확인할 수 있게 되었다. 오래지 않은 비극적 역사의 기억으로부터 길어올린, 그럼에도 인간을 끝내 인간이게 하는 간절하고 지극한 사랑의 이야기가 눈이 시리도록 선연한 이미지와 유려하고 시적인 문장에 실려 압도적인 아름다움으로 다가온다.
+                        일본에게 나라를 빼앗긴 채 하루하루를 서럽고 고달프게 살던 우리나라 사람들에게 감동을 안겨준 영화 <아리랑>이 상영 중인 임시 극장으로 아이들을 초대하고 있다. 다시 일어서려는 다짐이자 포기하지 않겠다는 의지이며 미래를 향한 희망의 외침인 ‘아리랑’의 참모습을 엿본다. <아리랑> 속에 깃든 평화와 화합의 메시지를 일깨워주고 있다. 아울러 우리나라를 대표하는 그림작가 한병호의 한국적이면서도 세련되고 익살스러운 석판화 기법의 그림을 함께 담아 아이들의 마음을 사로잡는다.
+                        일본에게 나라를 빼앗긴 채 하루하루를 서럽고 고달프게 살던 우리나라 사람들에게 감동을 안겨준 영화 <아리랑>이 상영 중인 임시 극장으로 아이들을 초대하고 있다. 다시 일어서려는 다짐이자 포기하지 않겠다는 의지이며 미래를 향한 희망의 외침인 ‘아리랑’의 참모습을 엿본다. <아리랑> 속에 깃든 평화와 화합의 메시지를 일깨워주고 있다. 아울러 우리나라를 대표하는 그림작가 한병호의 한국적이면서도 세련되고 익살스러운 석판화 기법의 그림을 함께 담아 아이들의 마음을 사로잡는다."
+        }
+    },
+    // GROUP - 북 트레일러
+    bookTrailers: ["https://www.youtube.com/embed/2R-WCGHS0uc?wmode=transparent", "https://www.youtube.com/embed/2R-WCGHS0uc?wmode=transparent"],
+    // GROUP - 이 책의 시리즈
+    bookSeries: {
+        // 시리즈 알람 유무
+        seriesAlarm: true,
+        // 이 책의 시리즈 리스트
+        seriesList: [
+            // 이미지URL, 시리즈명, 저자, 설명, 시리즈 상품의 ID값, 시리즈 상품의 관심 유무, 가격, 할인율
+            {seriesUrl: "s3/bucket/product/AE2349ADASDAXC.png", seriesName: "일주일", seriesAuthor: "김초엽", seriesPublication: "21세기 북스", seriesId: "659836", seriesAtten: true, seriesPrice: "13050", seriesDiscount: "10"},
+            {seriesUrl: "s3/bucket/product/AE2349ADASDAXC.png", seriesName: "아이 틴더유", seriesAuthor: "김초엽", seriesPublication: "21세기 북스", seriesId: "761232", seriesAtten: false, seriesPrice: "13050", seriesDiscount: "10"},
+            {seriesUrl: "s3/bucket/product/AE2349ADASDAXC.png", seriesName: "팀플레이", seriesAuthor: "김초엽", seriesPublication: "21세기 북스", seriesId: "192342", seriesAtten: true, seriesPrice: "13050", seriesDiscount: "10"},
+            {seriesUrl: "s3/bucket/product/AE2349ADASDAXC.png", seriesName: "마음만 먹으면", seriesAuthor: "김초엽", seriesPublication: "21세기 북스", seriesId: "991023", seriesAtten: false, seriesPrice: "13050", seriesDiscount: "10"},
+            {seriesUrl: "s3/bucket/product/AE2349ADASDAXC.png", seriesName: "나태주 인생 시전집", seriesAuthor: "김초엽", seriesPublication: "21세기 북스", seriesId: "251322", seriesAtten: false, seriesPrice: "13050", seriesDiscount: "10"},
+            {seriesUrl: "s3/bucket/product/AE2349ADASDAXC.png", seriesName: "마음만 먹으면", seriesAuthor: "김초엽", seriesPublication: "21세기 북스", seriesId: "641123", seriesAtten: false, seriesPrice: "13050", seriesDiscount: "10"}
+        ]
+    },
+    // GROUP - 이 책의 총서
+    bookEdition: {
+        // 총서 알람 유무
+        editionAlarm: true,
+        // 이 책의 총서 리스트
+        editionList: [
+            // 이미지URL, 총서 명, 저자, 설명, 총서 상품의 ID값, 총서 상품의 관심 유무, 가격, 할인율
+            {editionUrl: "s3/bucket/product/AE2349ADASDAXC.png", editionName: "일주일", editionAuthor: "김초엽", editionPublication: "21세기 북스", editionId: "659836", editionAtten: true, editionPrice: "13050", editionDiscount: "10"},
+            {editionUrl: "s3/bucket/product/AE2349ADASDAXC.png", editionName: "아이 틴더유", editionAuthor: "김초엽", editionPublication: "21세기 북스", editionId: "761232", editionAtten: false, editionPrice: "13050", editionDiscount: "10"},
+            {editionUrl: "s3/bucket/product/AE2349ADASDAXC.png", editionName: "팀플레이", editionAuthor: "김초엽", editionPublication: "21세기 북스", editionId: "192342", editionAtten: true, editionPrice: "13050", editionDiscount: "10"},
+            {editionUrl: "s3/bucket/product/AE2349ADASDAXC.png", editionName: "마음만 먹으면", editionAuthor: "김초엽", editionPublication: "21세기 북스", editionId: "991023", editionAtten: false, editionPrice: "13050", editionDiscount: "10"},
+            {editionUrl: "s3/bucket/product/AE2349ADASDAXC.png", editionName: "나태주 인생 시전집", editionAuthor: "김초엽", editionPublication: "21세기 북스", editionId: "251322", editionAtten: false, editionPrice: "13050", editionDiscount: "10"},
+            {editionUrl: "s3/bucket/product/AE2349ADASDAXC.png", editionName: "마음만 먹으면", editionAuthor: "김초엽", editionPublication: "21세기 북스", editionId: "641123", editionAtten: false, editionPrice: "13050", editionDiscount: "10"}
+        ]
+    },
+    // GROUP - 이 책의 상품구성
+    bookComposition: [
+        // 권수, 상품명, 저자, 출간일, 쪽수, 크기/중량(mn/g)
+        {bookCount: "999", bookName: "해리포터 마법사의 돌", bookAuthor: "jk롤링", "publicationDate": "2003/05/11", "bookPage": "324", bookWeight: "210x29*7"}
+        {bookCount: "999", bookName: "해리포터 비밀의 방", bookAuthor: "jk롤링", "publicationDate": "2006/05/11", "bookPage": "324", bookWeight: "210x29*7"}
+        {bookCount: "999", bookName: "해리포터 아즈카반의 죄수", bookAuthor: "jk롤링", "publicationDate": "2009/05/11", "bookPage": "324", bookWeight: "210x29*7"}
+        {bookCount: "999", bookName: "해리포터 불사조 기사단", bookAuthor: "jk롤링", "publicationDate": "2011/05/11", "bookPage": "324", bookWeight: "210x29*7"}
+        {bookCount: "999", bookName: "해리포터 혼혈왕자", bookAuthor: "jk롤링", "publicationDate": "2015/05/11", "bookPage": "324", bookWeight: "210x29*7"}
+        {bookCount: "999", bookName: "해리포터 죽음의성물", bookAuthor: "jk롤링", "publicationDate": "2017/05/11", "bookPage": "324", bookWeight: "210x29*7"}
+    ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{common/layout/cm-layout-ink(title_prefix='Sample')}">
+
+    <th:block layout:fragment="head-style-block">
+        <!-- local head block :: override parent layout partial -->
+        <!-- Swiper 버전 분기 -- MSIE v4 / 기타 v7 -->
+        <link rel="stylesheet" th:href="@{${cdnURI} + '/vendors/swiper/v4/swiper.min.css'}">
+        
+        <link rel="stylesheet" th:href="@{${cdnURI} + '/vendors/star-rating/css/star-rating.min.css'}">
+        <link rel="stylesheet" th:href="@{${cdnURI} + '/vendors/simplebar/simplebar.min.css'}">
+      
+        <th:block layout:fragment="local-style-block"></th:block>
+    </th:block>
+
+    <th:block layout:fragment="body-script-block">
+        <script th:src="@{${cdnURI} + '/vendors/star-rating/js/star-rating.min.js'}"></script>
+        <script th:src="@{${cdnURI} + '/vendors/star-rating/js/locales/ko.js'}"></script>
+        <script th:src="@{${cdnURI} + '/vendors/scrollpos-styler/scrollPosStyler.min.js'}"></script>
+        <script th:src="@{${cdnURI} + '/vendors/css-element-queries/ResizeSensor.js'}"></script>
+        <script th:src="@{${cdnURI} + '/vendors/simplebar/simplebar.min.js'}"></script>
+        <script th:src="@{${cdnURI} + '/vendors/svgxuse/svgxuse.js'}" crossorigin="anonymous"></script>
+        <!-- http://localhost:3300/resources/fo/vendors/blurify-master/blurify.js -->
+        <script th:src="@{${cdnURI} + '/vendors/blurify-master/blurify.js'}"></script>
+        
+        <!-- Swiper 버전 분기 -- MSIE v4 / 기타 v7 -->
+        <script th:src="@{${cdnURI} + '/vendors/swiper/v4/swiper.min.js'}" data-name="swiper" data-version="4"></script>
+        <!-- <script th:src="@{${cdnURI} + '/vendors/swiper/v7/swiper-bundle.min.js'}" data-name="swiper" data-version="7"></script> -->
+
+        <script th:src="@{/assets/js/ui_product_ink.js}"></script>
+        
+        <th:block layout:fragment="local-script-block"></th:block>
+    </th:block>
+    
+    <th:block layout:fragment="main-content">
+        <th:block th:insert="common/fragments/cm-body-breadcumb :: default"></th:block>
+        
+        <!-- contents_wrap -->
+        <section class="contents_wrap">
+            <div class="contents_inner">
+                <th:block layout:fragment="local-content"></th:block>
+            </div>
+        </section>
+        <!-- // contents_wrap -->
+    </th:block>
+
+</html>

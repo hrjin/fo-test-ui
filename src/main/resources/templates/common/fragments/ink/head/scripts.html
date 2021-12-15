@@ -1,0 +1,11 @@
+<!--/* 공통 HEAD 스크립트 */-->
+<script th:src="@{${cdnURI} + '/vendors/jquery/jquery.min.js'}"></script>
+<script th:src="@{${cdnURI} + '/vendors/lodash/lodash.min.js'}"></script>
+<script th:src="@{${cdnURI} + '/vendors/js-cookie/js.cookie.min.js'}"></script>
+
+<!-- TODO: 폴리필 스크립트 임포트 분기 - MSIE에만 한정 -->
+<!-- <script th:src="@{${cdnURI} + '/vendors/polyfills.min.js'}"></script> -->
+
+<!-- @kyobobook/kbb-js loader -->
+<script th:src="@{${cdnURI} + '/js/kbbjs-loader.js'}"></script>
+<script th:src="@{${cdnURI} + '/js/common-vars.js'}"></script>

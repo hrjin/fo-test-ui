@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout/default-ink}">
+	
+	<th:block layout:fragment="local-style-block">
+	  <!-- local style block :: override parent layout partial -->
+    </th:block>
+	
+	<th:block layout:fragment="local-script-block">
+	  <!-- local script block :: override parent layout partial -->
+      <script th:src="@{/assets/js/welcome.js}"></script>
+    </th:block>
+
+    <th:block layout:fragment="local-content">
+        <div style="height: 2000px; background: rgb(255, 255, 255)">
+            <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popMain"><span class="text">메인 팝업</span></button>
+            <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popAddress"><span class="text">우편번호 찾기 팝업</span></button>
+            <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popAddress2"><span class="text">우편번호 찾기 팝업(검색결과 있음)</span></button>
+            <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popAddress3"><span class="text">우편번호 찾기 팝업(검색결과 없음)</span></button>
+            <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popImgZoom"><span class="text">이미지 크게보기</span></button>
+
+            <div class="sns_share_wrap">
+                <button type="button" class="btn_share"><span class="ico_share"></span><span class="hidden">공유하기</span></button>
+                <div class="sns_share_box">
+                    <a href="#" class="btn_sns_share kakao"><span class="hidden">카카오톡 공유하기</span></a>
+                    <a href="#" class="btn_sns_share band"><span class="hidden">밴드 공유하기</span></a>
+                    <a href="#" class="btn_sns_share facebook"><span class="hidden">페이스북 공유하기</span></a>
+                    <a href="#" class="btn_sns_share twitter"><span class="hidden">트위트 공유하기</span></a>
+                    <a href="#" class="btn_sns_share url_copy"><span class="hidden">url 복사하기</span></a>
+                    <button class="btn_sns_share_close" type="button"><i class="ico_share_close"></i><span class="hidden">닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </th:block>
+
+    <!-- LayerPopup area -->
+    <th:block layout:fragment="layer-content">
+        <!-- 팝업 - 메인 -->
+        <!-- TODO : 팝업 노출 위치는 수정 예정 -->
+        <div id="popMain" class="dialog_wrap" data-class="dialog_main" data-nodim>
+            <!-- dialog_contents -->
+            <div class="dialog_contents">
+            <!-- swiper-container -->
+            <div class="swiper-container main_pop">
+                <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="main_pop_link"><img th:src="@{${cdnURI} + '/images/temporary/temp_main_pop.png'}" alt="임시 메인팝업 이미지" /></a>
+                </li>
+                </ul>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- //swiper-container -->
+            </div>
+            <!-- //dialog_contents -->
+            <div class="dialog_main_btn_wrap">
+            <button type="button" class="btn_main_pop" data-dialog-close><span class="text">오늘은 그만보기</span></button>
+            <button type="button" class="btn_main_pop" data-dialog-close><span class="text">닫기</span></button>
+            </div>
+        </div>
+        <!-- //팝업 - 메인 -->
+
+        <!-- 팝업 - 주소찾기 -->
+        <div id="popAddress" class="dialog_wrap dialog_address">
+            <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+            <!-- dialog_header -->
+            <div class="dialog_header">
+            <div class="dialog_title">주소찾기</div>
+            </div>
+            <!-- //dialog_header -->
+            <!-- dialog_contents -->
+            <div class="dialog_contents">
+            <div class="custom_scroll_wrap">
+                <!-- DESC : input search에 입력 시 or 입력 값이 있을 경우 .form_ip_search에 .force 클래스 추가됨 (스크립트 처리되어있음) -->
+                <!-- form_search_box -->
+                <div class="form_search_box">
+                <!-- form_ip_search -->
+                <div class="form_ip_search">
+                    <input type="search" class="form_ip" placeholder="예) 종로 1, 세종로 119" title="타이틀" />
+                    <button type="button" class="btn_ip_clear"><span class="hidden">초기화</span></button>
+                </div>
+                <!-- //form_ip_search -->
+                <button type="button" class="btn_ip_search"><span class="hidden">검색</span></button>
+
+                </div>
+                <p class="form_desc">도로명 또는 지번을 입력해주세요.</p>
+                <!-- //form_search_box -->
+                <div class="address_tip">
+                <p class="form_desc tip">아래와 같은 조합으로 검색하면 더욱 정확한 결과가 검색됩니다.</p>
+                <ul class="address_tip_list">
+                    <li class="address_tip_item">도로명 + 건물번호(예: 세종로 119)</li>
+                    <li class="address_tip_item">지역명(동/리) + 번지(예: 종로1)</li>
+                    <li class="address_tip_item" >지역명(동/리) + 건물명(아파트명(예: 교보생명빌딩)</li>
+                </ul>
+                </div>
+            </div>
+            </div>
+            <!-- //dialog_contents -->
+        </div>
+        <!-- //팝업 - 주소찾기-->
+        <!-- 팝업 - 주소찾기 결과있음-->
+        <div id="popAddress2" class="dialog_wrap dialog_address">
+            <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+            <!-- dialog_header -->
+            <div class="dialog_header">
+            <div class="dialog_title">주소찾기</div>
+            </div>
+            <!-- //dialog_header -->
+            <!-- dialog_contents -->
+            <div class="dialog_contents">
+            <!-- DESC : input search에 입력 시 or 입력 값이 있을 경우 .form_ip_search에 .force 클래스 추가됨 (스크립트 처리되어있음) -->
+            <!-- form_search_box -->
+            <div class="form_search_box">
+                <!-- form_ip_search -->
+                <div class="form_ip_search">
+                <input type="search" class="form_ip" placeholder="예) 종로 1, 세종로 119" title="타이틀" />
+                <button type="button" class="btn_ip_clear"><span class="hidden">초기화</span></button>
+                </div>
+                <!-- //form_ip_search -->
+                <button type="button" class="btn_ip_search"><span class="hidden">검색</span></button>
+            </div>
+            <p class="form_desc">도로명 또는 지번을 입력해주세요.</p>
+            <div class="address_search_total">
+                <p class="address_search_total_text"><span class="search_value">‘종로 1’</span> 검색결과 1,234 개</p>
+            </div>
+            <div class="custom_scroll_wrap">
+                <!-- //form_search_box -->
+                <div class="address_success_result">
+                <div class="address_success_wrap">
+                    <ul class="address_success_list">
+                    <li class="address_success_item">
+                        <div class="success_item_text">
+                        <div class="road_name_wrap">
+                            <span class="badge_md badge_line_primary"><span class="text">도로명</span></span>
+                            <button type="button" class="btn_road_name">서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)</button>
+                        </div>
+                        <div class="land_number_wrap">
+                            <span class="badge_md badge_line_gray"><span class="text">지번</span></span>
+                            <button type="button" class="btn_land_number">서울특별시 종로구 종로 1가 교보생명빌딩</button>
+                        </div>
+                        </div>
+                        <div class="success_item_post">
+                        <span>12345</span>
+                        </div>
+                        <div class="success_detail">
+                        <input type="text" class="form_ip" placeholder="상세주소를 입력해주세요." title="타이틀" />
+                        <button type="button" class="btn_ip btn_primary"><span class="text">확인</span></button>
+                        </div>
+                    </li>
+                    <li class="address_success_item">
+                        <div class="success_item_text">
+                        <div class="road_name_wrap">
+                            <span class="badge_md badge_line_primary"><span class="text">도로명</span></span>
+                            <button type="button" class="btn_road_name">서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)</button>
+                        </div>
+                        <div class="land_number_wrap">
+                            <span class="badge_md badge_line_gray"><span class="text">지번</span></span>
+                            <button type="button" class="btn_land_number">서울특별시 종로구 종로 1가 교보생명빌딩</button>
+                        </div>
+                        </div>
+                        <div class="success_item_post">
+                        <span>12345</span>
+                        </div>
+                        <div class="success_detail">
+                        <input type="text" class="form_ip" placeholder="상세주소를 입력해주세요." title="타이틀" />
+                        <button type="button" class="btn_ip btn_primary"><span class="text">확인</span></button>
+                        </div>
+                    </li>
+                    <li class="address_success_item">
+                        <div class="success_item_text">
+                        <div class="road_name_wrap">
+                            <span class="badge_md badge_line_primary"><span class="text">도로명</span></span>
+                            <button type="button" class="btn_road_name">서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)</button>
+                        </div>
+                        <div class="land_number_wrap">
+                            <span class="badge_md badge_line_gray"><span class="text">지번</span></span>
+                            <button type="button" class="btn_land_number">서울특별시 종로구 종로 1가 교보생명빌딩</button>
+                        </div>
+                        </div>
+                        <div class="success_item_post">
+                        <span>12345</span>
+                        </div>
+                        <div class="success_detail">
+                        <input type="text" class="form_ip" placeholder="상세주소를 입력해주세요." title="타이틀" />
+                        <button type="button" class="btn_ip btn_primary"><span class="text">확인</span></button>
+                        </div>
+                    </li>
+                    <li class="address_success_item">
+                        <div class="success_item_text">
+                        <div class="road_name_wrap">
+                            <span class="badge_md badge_line_primary"><span class="text">도로명</span></span>
+                            <button type="button" class="btn_road_name">서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)</button>
+                        </div>
+                        <div class="land_number_wrap">
+                            <span class="badge_md badge_line_gray"><span class="text">지번</span></span>
+                            <button type="button" class="btn_land_number">서울특별시 종로구 종로 1가 교보생명빌딩</button>
+                        </div>
+                        </div>
+                        <div class="success_item_post">
+                        <span>12345</span>
+                        </div>
+                        <div class="success_detail">
+                        <input type="text" class="form_ip" placeholder="상세주소를 입력해주세요." title="타이틀" />
+                        <button type="button" class="btn_ip btn_primary"><span class="text">확인</span></button>
+                        </div>
+                    </li>
+                    <li class="address_success_item">
+                        <div class="success_item_text">
+                        <div class="road_name_wrap">
+                            <span class="badge_md badge_line_primary"><span class="text">도로명</span></span>
+                            <button type="button" class="btn_road_name">서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)서울특별시 종로구 종로1(종로1가)</button>
+                        </div>
+                        <div class="land_number_wrap">
+                            <span class="badge_md badge_line_gray"><span class="text">지번</span></span>
+                            <button type="button" class="btn_land_number">서울특별시 종로구 종로 1가 교보생명빌딩</button>
+                        </div>
+                        </div>
+                        <div class="success_item_post">
+                        <span>12345</span>
+                        </div>
+                        <div class="success_detail">
+                        <input type="text" class="form_ip" placeholder="상세주소를 입력해주세요." title="타이틀" />
+                        <button type="button" class="btn_ip btn_primary"><span class="text">확인</span></button>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- pagination -->
+            <div class="pagination">
+                <!-- DESC :
+                * 첫 페이지일 때 - 이전 버튼 노출 X
+                * 마지막 페이지일 때 - 다음 버튼 노출 X
+                페이지네이션 케이스 가이드 참고
+                -->
+                <button class="btn_page prev"><span class="hidden">이전</span></button>
+                <div class="page_num">
+                <!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+                <a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+                <a href="#" class="btn_page_num active" title="현재페이지">10</a>
+                <a href="#" class="btn_page_num">11</a>
+                <a href="#" class="btn_page_num">12</a>
+                <a href="#" class="btn_page_num">13</a>
+                <a href="#" class="btn_page_num">14</a>
+                <a href="#" class="btn_page_num">15</a>
+                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+                <a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+                </div>
+                <button class="btn_page next"><span class="hidden">다음</span></button>
+            </div>
+            <!-- //pagination -->
+            </div>
+
+            <!-- //dialog_contents -->
+        </div>
+        <!-- //팝업 - 주소찾기 결과있음-->
+        <!-- 팝업 - 주소찾기 결과없음 -->
+        <div id="popAddress3" class="dialog_wrap dialog_address">
+            <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+            <!-- dialog_header -->
+            <div class="dialog_header">
+            <div class="dialog_title">주소찾기</div>
+            </div>
+            <!-- //dialog_header -->
+            <!-- dialog_contents -->
+            <div class="dialog_contents">
+            <div class="custom_scroll_wrap">
+                <!-- DESC : input search에 입력 시 or 입력 값이 있을 경우 .form_ip_search에 .force 클래스 추가됨 (스크립트 처리되어있음) -->
+                <!-- form_search_box -->
+                <div class="form_search_box">
+                <!-- form_ip_search -->
+                <div class="form_ip_search">
+                    <input type="search" class="form_ip" placeholder="예) 종로 1, 세종로 119" value="조ㅇㅗㄹ1" title="타이틀" />
+                    <button type="button" class="btn_ip_clear"><span class="hidden">초기화</span></button>
+                </div>
+                <!-- //form_ip_search -->
+                <button type="button" class="btn_ip_search"><span class="hidden">검색</span></button>
+
+                </div>
+                <p class="form_desc">도로명 또는 지번을 입력해주세요.</p>
+                <!-- //form_search_box -->
+                <div class="search_fail">
+                <p class="text_search_fail"><span class="fail_search_value">‘조ㅇㅗㄹ 1’</span> 검색결과가 없습니다.</p>
+                <p>검색어에 잘못된 철자가 없는지, 정확한 주소인지 다시 한번 확인해주세요.</p>
+                </div>
+            </div>
+            </div>
+            <!-- //dialog_contents -->
+        </div>
+        <!-- //팝업 - 주소찾기 결과없음-->
+
+        <!-- 팝업 - 이미지크게보기 -->
+        <div id="popImgZoom" class="dialog_wrap" data-class="dialog_show_img">
+            <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+            <!-- dialog_contents -->
+            <div class="dialog_contents">
+            <!-- 큰 이미지 영역 -->
+            <div class="gallery_top_wrap">
+                <div class="swiper-container gallery_top">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                    <li class="swiper-slide">
+                    <div class="portrait_img_box">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="이미지 크게보기 임시이미지">
+                    </div>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                </div>
+                <button class="swiper-button-next"></button>
+                <button class="swiper-button-prev"></button>
+            </div>
+            <!-- // 큰 이미지 영역 -->
+
+            <!-- 썸네일 이미지 영역 -->
+            <div class="gallery_thumbs_wrap">
+                <div class="swiper-container gallery_thumbs">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <!-- DESC : 썸네일영역은 background-image, img 모두 src 변경처리 필요. 큰이미지와 동일한 src url -->
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png);'}">
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="썸네일 임시 이미지">
+                        </span>
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_portrait.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                    <li class="swiper-slide">
+                    <button type="button" class="btn_thumbs">
+                        <span class="thumb_img_box" th:style="@{'background-image: url(' + ${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png);'}"></span>
+                        <img th:src="@{${cdnURI} + '/images/temporary/temp_img_zoom_landscape.png'}" alt="썸네일 임시 이미지">
+                    </button>
+                    </li>
+                </ul>
+                </div>
+                <button class="swiper-button-next"></button>
+                <button class="swiper-button-prev"></button>
+            </div>
+            <!-- // 썸네일 이미지 영역 -->
+            </div>
+            <!-- //dialog_contents -->
+        </div>
+        <!-- //팝업 - 이미지크게보기 -->
+        <!-- // LayerPopup area -->
+    </th:block>
+    <!-- // LayerPopup area -->
+</html>

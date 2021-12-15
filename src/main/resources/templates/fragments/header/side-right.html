@@ -1,0 +1,462 @@
+<th:block th:fragment="default">
+    <!-- 가격 & 배송정보 -->
+    <div class="col_prod_info">
+        <!-- 가격 정보 -->
+        <div class="prod_price_wrap">
+            <div class="badge_list_box">
+                <span class="badge_md badge_line_primary"><span class="text">2021년 11월 11일 오늘의
+                        책</span></span>
+                <span class="badge_md badge_line_primary"><span class="text">MD의 선택</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">이벤트</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">무료배송</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">사은품</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">한정판매</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">소득공제</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">정가제Free</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">교보단독</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">예약판매</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">분철서비스</span></span>
+                <span class="badge_md badge_line_gray"><span class="text">정가인하</span></span>
+            </div>
+            <!-- case 1 : 정가만 노출 -->
+            <div class="prod_price_box">
+                <div class="prod_price">
+                    <span class="price">
+                        <span class="val">12,600<span class="unit">원</span></span>
+                    </span>
+                </div>
+            </div>
+            <!-- case 1 : 정가만 노출 -->
+            <!-- case 2 : 할인 가격 노출 -->
+            <div class="prod_price_box">
+                <div class="prod_price">
+                    <span class="percent">10%</span>
+                    <span class="price">
+                        <span class="val">12,600<span class="unit">원</span></span>
+                    </span>
+                    <span class="sale_price">
+                        <span class="val">35,000<span class="unit">원</span></span>
+                    </span>
+                </div>
+                <div class="right_btn">
+                    <button type="button" class="btn_xs btn_primary"><span class="ico_download_white"></span><span
+                            class="text">할인쿠폰</span></button>
+                </div>
+            </div>
+            <!-- case 2 : 할인 가격 노출 -->
+        </div>
+        <!-- 가격 정보 -->
+        <!-- 배송/혜택 정보 -->
+        <div class="prod_guide_wrap">
+            <!-- DESC : 알림신청 영역은 .prod_guide_box 에 .alarm 클래스 추가필요 -->
+            <!-- 적립/혜택 -->
+            <div class="prod_guide_box">
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_title">적립/혜택</div>
+                    <div class="prod_guide_cont">
+                        <div class="point_text">
+                            3,035P
+                            <!-- tooltip_wrap -->
+                            <div class="tooltip_wrap type_info right">
+                                <button type="button" class="btn_tooltip" data-btn-toggle><span
+                                        class="ico_arw"></span><span class="hidden">툴팁열기</span></button>
+                                <div class="tooltip_inner">
+                                    <div class="tooltip_contents">
+                                        <!-- tooltip_info_list -->
+                                        <div class="tooltip_info_list">
+                                            <!-- tooltip_info_item -->
+                                            <div class="tooltip_info_item">
+                                                <div class="title_wrap title_size_xxs">
+                                                    <p class="title_heading">기본적립</p>
+                                                </div>
+                                                <div class="info_cont">
+                                                    <p class="bul_item_branch font_size_min">
+                                                        <span class="cont_title">3% 적립</span>
+                                                        <span class="cont_desc">320P</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- //tooltip_info_item -->
+                                            <!-- tooltip_info_item -->
+                                            <div class="tooltip_info_item">
+                                                <div class="title_wrap title_size_xxs">
+                                                    <p class="title_heading">
+                                                        추가적립
+                                                        <button type="button" class="btn_info_popup"><span
+                                                                class="ico_question"></span><span class="hidden">팝업
+                                                                열기</span></button>
+                                                    </p>
+                                                </div>
+                                                <div class="info_cont">
+                                                    <ul class="bul_list">
+                                                        <li class="bul_item_square font_size_min">
+                                                            <span class="cont_title">5만원 이상 구매 시
+                                                                추가</span>
+                                                            <span class="cont_desc">2,000P</span>
+                                                        </li>
+                                                        <li class="bul_item_square font_size_min">
+                                                            <span class="cont_title">3만원 이상 구매 시, 등급별
+                                                                2~4% 추가</span>
+                                                            <span class="cont_desc">최대 416P</span>
+                                                        </li>
+                                                        <li class="bul_item_square font_size_min">
+                                                            <span class="cont_title">리뷰 작성 시, e교환권
+                                                                추가</span>
+                                                            <span class="cont_desc">최대 300원</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- //tooltip_info_item -->
+                                            <!-- tooltip_info_item -->
+                                            <div class="tooltip_info_item">
+                                                <div class="title_wrap title_size_xxs">
+                                                    <p class="title_heading">부가혜택 안내</p>
+                                                    <div class="right_area">
+                                                        <div class="benefit_link_box">
+                                                            <a href="#" class="btn_link">제휴포인트</a>
+                                                            <a href="#" class="btn_link">도서소득공제</a>
+                                                            <a href="#" class="btn_link">쿠폰/혜택</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //tooltip_info_item -->
+                                        </div>
+                                        <!-- //tooltip_info_list -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //tooltip_wrap -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+            </div>
+            <!-- //적립/혜택  -->
+            <!-- 배송안내 -->
+            <div class="prod_guide_box">
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_title">배송안내</div>
+                    <div class="prod_guide_cont">
+                        <div class="delivery_guide_text">
+                            <span class="delivery_type">무료배송</span>
+                            <!-- tooltip_wrap -->
+                            <div class="tooltip_wrap type_sm right">
+                                <button type="button" class="btn_tooltip"><span class="ico_info"></span><span
+                                        class="hidden">툴팁열기</span></button>
+                                <div class="tooltip_inner">
+                                    <div class="tooltip_header">
+                                        <div class="tooltip_head_title">배송비 무료 안내</div>
+                                    </div>
+                                    <div class="tooltip_contents">
+                                        <div class="tooltip_sub_title">국내도서 / 외국도서</div>
+                                        <div class="tooltip_desc">
+                                            도서만 1만 원 이상 구매 시 무료배송
+                                            <br />도서 + 잡지 / 만화 / :K컬렉션을 함께 1만 원 이상 구매 시 무료배송
+                                        </div>
+                                        <p class="bul_item_asterisk font_size_xxs">1만원 미만 시 2,000원 배송비
+                                            부과</p>
+
+                                        <div class="tooltip_sub_title">잡지 / 만화 / :K컬렉션 (교보배송)</div>
+                                        <div class="tooltip_desc">
+                                            각각 구매하거나 함께 2만 원 이상 구매 시 무료배송
+                                        </div>
+                                        <p class="bul_item_asterisk font_size_xxs">2만원 미만 시 2,000원 배송비
+                                            부과</p>
+
+                                        <div class="tooltip_sub_title">해외주문 서양도서 / 해외주문 일본도서 (교보배송)
+                                        </div>
+                                        <div class="tooltip_desc">
+                                            각각 구매하거나 함께 1만 원 이상 구매 시 무료배송
+                                        </div>
+                                        <p class="bul_item_asterisk font_size_xxs">1만원 미만 시 2,000원 배송비
+                                            부과</p>
+
+                                        <div class="tooltip_sub_title">업체배송 상품 (전집, GIFT, 음반 / DVD
+                                            등)<br /> 중고장터 상품</div>
+                                        <div class="tooltip_desc">
+                                            해당 상품 상세페이지 "배송비" 참고 (업체 별/판매자 별 무료배송 기준 다름)
+                                        </div>
+
+                                        <div class="tooltip_sub_title">바로드림 오늘배송</div>
+                                        <div class="tooltip_desc">
+                                            업체에서 별도 배송하여 1Box당 배송비 2,500원 부과
+                                        </div>
+                                        <p class="bul_item_asterisk font_size_xxs">1Box 기준 : 도서 10권</p>
+
+                                        <div class="tooltip_sub_title">그 외 무료배송 기준</div>
+                                        <div class="tooltip_desc">
+                                            바로드림, eBook 상품을 주문한 경우, 플래티넘/골드/실버회원 무료배송쿠폰 이용하여 주문한 경우,
+                                            무료배송 등록 상품을 주문한 경우
+                                        </div>
+
+                                        <div class="info_text_box">
+                                            <div class="title_wrap title_size_xs">
+                                                <p class="title_heading">유의사항</p>
+                                            </div>
+                                            <div class="info_text font_size_xxs">
+                                                국내도서와 해외주문도서를 함께 구매 시 별도로 출고되어 배송비는 각각 부과 (장바구니 기준)
+                                            </div>
+                                            <div class="info_text font_size_min">
+                                                예) 국내도서 7,000원 + 해외주문도서 7,000원을 함께 구매할 경우 배송비는 2,000원 +
+                                                2,000원 = 4,000원 부과 (단, 주문/결제에서 한꺼번에 출고 신청 시 배송비 정책에 따라
+                                                무료배송)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn_tooltip_close"><span
+                                            class="hidden">툴팁닫기</span></button>
+                                </div>
+                            </div>
+                            <!-- //tooltip_wrap -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_cont">
+                        <div class="delivery_guide_text">
+                            <!-- DESC : .fc_spot : 당일배송/Special order/양장도서/Pre-order 만 노출 -->
+                            <span class="fc_spot">당일배송</span> 지금 주문하면 <span class="date">내일(21일/토)</span> 도착 예정
+                            <button type="button" class="btn_info_popup"><span class="ico_question"></span><span
+                                    class="hidden">팝업
+                                    열기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_cont">
+                        <div class="prod_info_text">
+                            서울특별시 종로구 세종대로 3
+                            <a href="#" class="btn_xxs btn_line_gray"><span class="text">변경</span><span
+                                    class="ico_arw"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_cont">
+                        <!-- case 1 : 불릿 리스트 한 개 -->
+                        <div class="info_text_box size_sm">
+                            <p class="bul_item_dot font_size_min">주문일로부터 영업일 기준 5일 이후 발송</p>
+                        </div>
+                        <!-- //case 1 : 불릿 리스트 한 개 -->
+
+                        <!-- case 2 : 불릿 리스트 두 개 이상 -->
+                        <div class="info_text_box size_sm">
+                            <ul class="bul_list">
+                                <li class="bul_item_dot font_size_min">해외주문도서는 해외 거래처 사정에 의해 품절/지연될 수
+                                    있습니다.</li>
+                                <li class="bul_item_dot font_size_min">스페셜오더 도서나 일서해외주문도서와 함께 주문 시 배송일에
+                                    맞추어 지연되오니, 이점 유의해주시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                        <!-- //case 2 : 불릿 리스트 두 개 이상 -->
+
+                        <!-- case 3 : 불릿 리스트 + 더보기 버튼 -->
+                        <div class="info_text_box size_sm">
+                            <p class="bul_item_dot font_size_min">분철옵션 선택 시, 예상 출고일보다 2일 추가 기간 소요</p>
+
+                            <a href="#" class="btn_more_view_sm"><span class="text">분철서비스
+                                    더보기</span><span class="ico_arw"></span></a>
+                        </div>
+                        <!-- //case 3 : 불릿 리스트 + 더보기 버튼 -->
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+            </div>
+            <!-- //배송안내 -->
+            <!-- 배송안내 | 안내문구 한 개만 있을 경우 -->
+            <div class="prod_guide_box">
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_title">배송안내</div>
+                    <div class="prod_guide_cont">
+                        <div class="delivery_guide_text">
+                            인터넷으로 주문하고 매장에서 직접 수령
+                            <button type="button" class="btn_info_popup"><span class="ico_question"></span><span
+                                    class="hidden">팝업
+                                    열기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+            </div>
+            <!-- //배송안내 | 안내문구 한 개만 있을 경우 -->
+            <!-- 강연기간 or 공연기간 -->
+            <!-- DESC : 강연기간, 공연기간 처럼 리스트 타입으로 쓰여야할 경우 [.type_list] 클래스 추가 -->
+            <div class="prod_guide_box type_list">
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_title">강연기간</div>
+                    <div class="prod_guide_cont">
+                        <div class="info_text">2021.10.09 ~ 2021.10.19</div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_title">강연장</div>
+                    <div class="prod_guide_cont">
+                        <a href="#" class="btn_text_link"><span class="text">충무아트센터 중장</span><span
+                                class="ico_arw"></span></a>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_title">강연시간</div>
+                    <div class="prod_guide_cont">
+                        <div class="info_text">175분</div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_title">관람연령</div>
+                    <div class="prod_guide_cont">
+                        <div class="info_text">중학생이상 관람가</div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+                <!-- prod_guide_row -->
+                <div class="prod_guide_row">
+                    <div class="prod_guide_title">가격 <span class="fw_regular">(1인기준)</span></div>
+                    <div class="prod_guide_cont">
+                        <div class="info_text">
+                            R석 130,000원<br />
+                            S석 130,000원
+                        </div>
+                    </div>
+                </div>
+                <!-- //prod_guide_row -->
+            </div>
+            <!-- //강연기간 or 공연기간 -->
+        </div>
+        <!-- //배송/혜택 정보 -->
+
+        <!-- 알림신청 -->
+        <div class="alarm_apply_swiper_wrap">
+            <!-- swiper-container -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <span class="prod_alarm_text">eBook 알림을 받아보시겠어요?</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <span class="prod_alarm_text">작가의 소식을 받아보시겠어요?</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <span class="prod_alarm_text">재입고 소식을 받아보시겠어요?</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //swiper-container -->
+            <div class="right_area">
+                <a href="#" class="btn_xs btn_line_primary"><span class="ico_alarm"></span><span
+                        class="text">알림신청</span></a>
+            </div>
+        </div>
+        <!-- //알림신청 -->
+
+        <!-- 판매상태 case 1 : 텍스트 한 줄 -->
+        <div class="prod_status_box">
+            <div class="prod_status_text"><span class="status">절판</span>되었습니다.</div>
+        </div>
+        <!-- //판매상태 case 1 : 텍스트 한 줄 -->
+        <!-- 판매상태 case 2 : 텍스트 두 줄 이상 -->
+        <div class="prod_status_box">
+            <div class="prod_status_text">판매가 <span class="status">종료</span>되었습니다.<br />구매한 동영상은 마이룸에서
+                확인하세요.</div>
+        </div>
+        <!-- //판매상태 case 2 : 텍스트 두 줄 이상 -->
+
+        <!-- 알립니다 case 1 : MD가 직접 등록한 경우 -->
+        <div class="info_text_box">
+            <div class="title_wrap title_size_xs">
+                <p class="title_heading"><span class="ico_speech"></span>알립니다.</p>
+            </div>
+            <div class="title_wrap title_size_xxs">
+                <p class="title_heading"><span class="fc_spot">오늘 단 하루만 진행하는 이벤트!</span></p>
+            </div>
+            <p class="info_text font_size_xxs">초판 한정 사인 인쇄본/포함 소설 2만원 구매 시 거치대, 지퍼백, 다이어리 증정</p>
+        </div>
+        <!-- //알립니다 case 1 : MD가 직접 등록한 경우 -->
+        <!-- 알립니다 case 2 : MD가 직접 등록한 경우 + API -->
+        <div class="info_text_box">
+            <div class="info_text_inner">
+                <div class="title_wrap title_size_xs">
+                    <p class="title_heading"><span class="ico_speech"></span>알립니다.</p>
+                </div>
+                <div class="title_wrap title_size_xxs">
+                    <p class="title_heading"><span class="fc_spot">오늘 단 하루만 진행하는 이벤트!</span></p>
+                </div>
+                <p class="info_text font_size_xxs">초판 한정 사인 인쇄본/포함 소설 2만원 구매 시 거치대, 지퍼백, 다이어리 증정</p>
+            </div>
+            <div class="info_text_inner">
+                <ul class="bul_list">
+                    <li class="bul_item_dot font_size_xxs">본 도서는 <span class="fw_medium">yyyy년 mm월 dd일
+                            발송 예정인 예약판매도서</span> 입니다. 단, 출판사의 사정으로 출간이 지연될 수 있으니, 이 점 양해 부탁드립니다.</li>
+                    <li class="bul_item_dot font_size_xxs">예약판매도서의 경우 실제 출간 후 도서정보가 달라질 수 있습니다. 이 점 양해
+                        부탁드립니다.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //알립니다 case 2 : MD가 직접 등록한 경우 + API -->
+        <!-- 알립니다 case 3 : 불릿 리스트 -->
+        <div class="info_text_box">
+            <div class="title_wrap title_size_xs">
+                <p class="title_heading"><span class="ico_speech"></span>알립니다.</p>
+            </div>
+            <ul class="bul_list">
+                <li class="bul_item_dot font_size_xxs">본 도서는 <span class="fw_medium">yyyy년 mm월 dd일 발송
+                        예정인 예약판매도서</span> 입니다. 단, 출판사의 사정으로 출간이 지연될 수 있으니, 이 점 양해 부탁드립니다.</li>
+                <li class="bul_item_dot font_size_xxs">예약판매도서의 경우 실제 출간 후 도서정보가 달라질 수 있습니다. 이 점 양해
+                    부탁드립니다.</li>
+            </ul>
+        </div>
+        <!-- //알립니다 case 3 : 불릿 리스트 -->
+        <!-- 알립니다 case 4 : 문구 영역 두 개 이상 -->
+        <div class="info_text_box">
+            <div class="info_text_inner">
+                <div class="title_wrap title_size_xs">
+                    <p class="title_heading"><span class="ico_speech"></span>알립니다.</p>
+                </div>
+                <p class="bul_item_dot font_size_xxs"><strong class="fw_medium">본 상품은 주문 후 제작되는
+                        맞춤도서입니다.</strong><br />주문 기간에 따라 도서 출고일은 최소 3일에서 최대 8일이 소요됩니다.</p>
+            </div>
+            <div class="info_text_inner">
+                <div class="title_wrap title_size_xxs">
+                    <p class="title_heading">취소/반품에 대한 안내</p>
+                </div>
+                <p class="info_text font_size_xxs">POD도서는 고객 주문 후 제작되는 도서로, 단순변심 및 착오로 인한 취소, 반품이 절대
+                    불가하니 이점 반드시 유의하여 주시기 바랍니다.</p>
+            </div>
+        </div>
+        <!-- //알립니다 case 4 : 문구 영역 두 개 이상 -->
+
+        <!-- btn_wrap : 버튼 1개만 있는 타입 -->
+        <div class="btn_wrap justify overlap">
+            <!--<a href="#" class="btn_sm btn_line_gray"><span class="ico_new_window"></span><span class="text">EBS 강좌보기</span></a>-->
+            <button type="button" class="btn_sm btn_line_gray"><span class="ico_locate"></span><span class="text">매장
+                    재고·위치</span></button>
+        </div>
+        <!-- //btn_wrap 버튼 1개만 있는 타입 -->
+        <!-- btn_wrap 버튼 2개있는 타입 -->
+        <div class="btn_wrap justify overlap">
+            <a href="#" class="btn_sm btn_line_gray"><span class="ico_new_window"></span><span class="text">EBS
+                    강좌보기</span></a>
+            <button type="button" class="btn_sm btn_line_gray"><span class="ico_locate"></span><span class="text">매장
+                    재고·위치</span></button>
+        </div>
+        <!-- //btn_wrap 버튼 2개있는 타입 -->
+    </div>
+    <!-- //가격 & 배송정보 -->
+</th:block>

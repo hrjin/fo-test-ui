@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout/cm-layout-default(title='@kyobobook/kbb-js')}">
+    
+    <head>
+        <style>  
+	       .mytable { border-collapse:collapse; }  
+	       .mytable td { border:1px solid black; }
+	    </style>
+    </head>
+    
+    <div class="container" layout:fragment="content" style="margin-top:100px; margin-bottom: 100px;">
+       <h1>User Agent</h1>
+        
+       <table class="mytable">
+		  <tbody>
+		      <th:block th:each="agentInfo : ${agentInfoList}">
+		          <tr th:each="entry : ${agentInfo}">
+			          <td th:text="${entry.key}"></td>
+	                  <td th:text="${entry.value}"></td>
+		          </tr>
+	          </th:block> 
+		  </tbody>
+		</table>
+    </div>
+</html>

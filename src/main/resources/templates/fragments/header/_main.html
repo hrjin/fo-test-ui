@@ -1,0 +1,27 @@
+<th:block th:fragment="default">
+    <!-- 상품 정보 영역 -->
+    <div class="prod_detail_header">
+        <div class="header_contents_inner">
+            <!-- 상품 제목 -->
+            <th:block th:insert="fragments/header/title :: default"></th:block>
+            <div class="prod_detail_view_wrap">
+                <!-- 상품 유형 -->
+                <th:block th:insert="fragments/header/type :: default"></th:block>
+               
+                <div class="prod_detail_view_area">
+                    <!-- 상품 정보 -->
+                    <th:block th:insert="fragments/header/side-left :: default"></th:block>
+                    
+                    <!-- 상품 이미지 -->
+                    <th:block th:insert="fragments/header/image :: default"></th:block>
+                    
+                    <!-- 가격 & 배송정보 -->
+                    <th:block th:insert="fragments/header/side-right :: default"></th:block>
+                </div>
+                <!-- //상품 정보 -->
+            </div>
+            <!-- //상품 정보 view 영역 -->
+        </div>
+    </div>
+    <!-- //상품 정보 영역 -->
+</th:block>

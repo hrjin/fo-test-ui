@@ -1,0 +1,120 @@
+<th:block th:fragment="default">
+    <!-- 도서정보 -->
+    <div class="col_prod_info">
+        <div class="prod_info_wrap">
+            <div class="prod_info_title">직업기초능력 기출예상문제</div>
+
+            <div class="prod_series_box">
+                <span class="text">상반기 주요 공기업 NCS 기출복원문제</span>
+                <span class="gap"> | </span>
+                <span class="text">실전모의고사</span>
+            </div>
+
+            <!-- DESC : 상품 타이틀 (스크립트 적용되어 있음) 자세한 내용은 가이드 참고 부탁드립니다. -->
+            <!-- 저자명 case 1 : 세 줄 이하 -->
+            <div class="prod_author_box auto_overflow_wrap">
+                <div class="auto_overflow_contents">
+                    <div class="auto_overflow_inner">
+                        <div class="author">
+                            저자명 세 줄 안넘어갈 경우 : 한강, 공지영, 프란츠 카프카, 알베르 카뮈, 다자이 오사무
+                        </div>
+                    </div>
+                </div>
+                <div class="auto_overflow_footer">
+                    <button type="button" class="btn_more_detail"><span class="text">더보기</span><span
+                            class="ico_plus"></span></button>
+                </div>
+            </div>
+            <!-- //저자명 case 1 : 세 줄 이하 -->
+            <!-- 저자명 case 2 : 세 줄 넘어갈 경우 -->
+            <div class="prod_author_box auto_overflow_wrap">
+                <div class="auto_overflow_contents">
+                    <div class="auto_overflow_inner">
+                        <div class="author">
+                            저자명 세 줄 넘어갈 경우 : 한강, 공지영, 프란츠 카프카, 알베르 카뮈, 다자이 오사무,
+                            에드거 앨런, 로버트 루이스, 외 3명 지음·김석희, 정지원,임미경 옮김·김난주, 김석희, 한강 그림·프란츠, 한강 그림·프란츠
+                        </div>
+                    </div>
+                </div>
+                <div class="auto_overflow_footer">
+                    <button type="button" class="btn_more_detail"><span class="text">더보기</span><span
+                            class="ico_plus"></span></button>
+                </div>
+            </div>
+            <!-- //저자명 case 2 : 세 줄 넘어갈 경우 -->
+
+            <div class="prod_info_text publish_date">
+                <a href="#" class="btn_publish_link">문학동네</a>·2021년 09월 09일 출간 <span class="date">(1쇄
+                    2008년 09월 10일)</span>
+            </div>
+
+            <div class="prod_best_box">
+                <a href="#" class="btn_best_link">
+                    <div class="prod_best_title"><span class="text">주간베스트</span></div>
+                    <div class="prod_best_text">국내도서 <span class="rank">10</span>위·소설 <span
+                            class="rank">3</span>위</div>
+                </a>
+            </div>
+
+            <div class="prod_info_text">
+                이 도서는 가장 최근에 출간된 개정판입니다.
+                <a href="#" class="btn_xxs btn_line_gray"><span class="text">구판보기</span><span
+                        class="ico_arw"></span></a>
+            </div>
+
+            <div class="prod_review_box">
+                <div class="col_review">
+                    <span class="review_score">9.3</span>
+                    <input type="number" class="form_rating" value="9.3" title="이 책의 평점" readonly />
+                    <span class="review_desc">(<span class="val">302</span>개의 리뷰)</span>
+                </div>
+                <div class="col_review">
+                    <span class="review_quotes_text">좋았어요</span>
+                    <span class="review_desc">(<span class="val">76%</span>의 구매자)</span>
+                </div>
+                <button type="button" class="btn_go_review"><span class="hidden">리뷰 영역으로
+                        가기</span></button>
+            </div>
+
+            <div class="prod_info_tbl_box">
+                <div class="title_wrap title_size_xs">
+                    <p class="title_heading">제작사양</p>
+                </div>
+                <div class="tbl_col_wrap type_prod_detail">
+                    <table class="tbl_col">
+                        <caption>제작사양</caption>
+                        <colgroup>
+                            <col style="width: 33%" />
+                            <col style="width: 33%;" />
+                            <col style="width: auto;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">표지</th>
+                                <th scope="col">내지</th>
+                                <th scope="col">제작</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>컬러</td>
+                                <td>흑백</td>
+                                <td>양장</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tag_wrap">
+                <a href="#" class="tag_item">#카드</a>
+                <a href="#" class="tag_item">#선물하기</a>
+                <a href="#" class="tag_item">#리필</a>
+                <a href="#" class="tag_item">#기프트</a>
+                <a href="#" class="tag_item">#오프라인카드</a>
+                <a href="#" class="tag_item">#기프트카드</a>
+            </div>
+        </div>
+    </div>
+    <!-- //도서정보 -->
+</th:block>

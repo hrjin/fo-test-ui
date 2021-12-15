@@ -1,0 +1,89 @@
+application:
+  # 버전 확인 용
+  # version: 2021-07-16T02.24.16
+  # date --utc +%FT%T%Z
+  version: 2021-11-30T23:50:19UTC
+  
+server:
+  port: ${PORT:8050}
+
+spring: 
+  application:
+    name: fo-ui-proto-r2
+  servlet: 
+    multipart: 
+      maxFileSize: -1  #300MB
+      maxRequestSize: -1 #300MB
+  thymeleaf:
+    cache: ${THYM_CACHE:true}
+      
+resource:
+  # TODO: remove dummy properties
+  dummy:
+    message: "welcome springboot!"
+    restApiHost: http://dummy.restapiexample.com/api/v1
+  api:
+    auth:
+      host: ${API_AUTH_HOST}
+      publicKey: ${API_AUTH_PUBKEY}
+      service:
+        baseURL: ${API_AUTH_BASEURL:''}
+        verify: ${API_AUTH_URI_VERIFY:'/verify'}
+        reissue: ${API_AUTH_URI_REISSUE:'/reissue'}
+    # onk:
+    #   host: ${API_ONK_HOST}
+    #   service:
+    #     baseURL: ${API_ONK_BASEURL:''}
+    # product:
+    #   host: ${API_PRODUCT_HOST}
+    #   service:
+    #     baseURL: ${API_PRODUCT_BASEURL:''}
+    # member:
+    #   host: ${API_MEMBER_HOST}
+    #   service:
+    #     baseURL: ${API_MEMBER_BASEURL:''}
+    # my:
+    #   host: ${API_MY_HOST}
+    #   service:
+    #     baseURL: ${API_MY_BASEURL:''}
+    # bc:
+    #   host: ${API_BC_HOST}
+    #   service:
+    #     baseURL: ${API_BC_BASEURL:''}
+    # event:
+    #   host: ${API_EVENT_HOST}
+    #   service:
+    #     baseURL: ${API_EVENT_BASEURL:''}
+    # search:
+    #   host: ${API_SEARCH_HOST}
+    #   service:
+    #     baseURL: ${API_SEARCH_BASEURL:''}
+    # order:
+    #   host: ${API_ORDER_HOST}
+    #   service:
+    #     baseURL: ${API_ORDER_BASEURL:''}
+  
+cloud:
+  aws:
+    credentials:
+      accessKey: ${AWS_S3_ACCESSKEY}
+      secretKey: ${AWS_S3_SECRETKEY}
+    s3:
+      bucket: ${AWS_S3_BUCKET}
+    cdn:
+      host: ${AWS_CDN_HOST}
+      service:
+        resFo: ${AWS_CDN_URI_RES_FO}
+    region:
+      static: ${AWS_REGION_STATIC}
+    stack:
+      auto: false
+      
+# TODO: local/development/production 스테이지에 따른 로그 레벨 적용
+logging:
+  level:
+    root: info
+    '[org.springframework.web.reactive.function.client]': DEBUG
+    '[com.amazonaws]':
+      '[util.EC2MetadataUtils]': ERROR
+      '[internal.InstanceMetadataServiceResourceFetcher]': ERROR
