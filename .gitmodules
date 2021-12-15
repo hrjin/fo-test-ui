@@ -1,0 +1,3 @@
+[submodule "src/main/resources/templates/common"]
+	path = src/main/resources/templates/common
+	url = https://github.com/hrjin/fo-common-ui.git
